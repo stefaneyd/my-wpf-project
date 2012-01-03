@@ -1,0 +1,42 @@
+﻿<Window x:Class="Testing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel Name="stack1">
+        <StackPanel Name="nestedStack" Orientation="Horizontal" Height="30">
+            <Label Name="label1" Target="{Binding ElementName=myTextBox}" Content="_Name:" />
+            <TextBox x:Name="myTextBox" Width="100"  />
+            <Label Name="label2" Target="{Binding ElementName=myTextBox1}" Content="N_ame:" />
+            <TextBox x:Name="myTextBox1" Width="100"  />
+            <Button Height="23" HorizontalAlignment="Left" Margin="22,3,0,0" Name="btnCopy" VerticalAlignment="Top"
+                    Width="75" Command="Copy">_Copy</Button>
+            <Button Height="23" HorizontalAlignment="Left" Margin="22,3,0,0" Name="btnPaste" VerticalAlignment="Top"
+                    Width="75" Command="Paste">_Paste</Button>
+        </StackPanel>
+        <ListBox Name="listBox">
+            <TextBlock Name="listItem1" Text="Fyrsta" />
+            <TextBlock Name="listItem2" Text="Annað" />
+            <Button Name="listItem3" Content="WTF" />
+            <StackPanel Name="nestedStack2" Orientation="Horizontal">
+                <TextBlock Name="nestedListItem1" Text="Name" />
+                <TextBox Name="nestedListItem2"  Width="100"/>
+            </StackPanel>
+            <TreeView Name="tree">
+                <TreeViewItem>
+                    <TreeViewItem.Header>
+                        <TextBlock>TreeViewItem One</TextBlock>
+                    </TreeViewItem.Header>
+                    <TreeViewItem Header="Child one" />
+                    <TreeViewItem Header="Child two" />   
+                </TreeViewItem>
+                <TreeViewItem>
+                    <TreeViewItem.Header>
+                        <TextBlock>TreeViewItem Two</TextBlock>
+                    </TreeViewItem.Header>
+                    <TreeViewItem Header="Child one" />
+                    <TreeViewItem Header="Child two" />
+                </TreeViewItem>              
+            </TreeView>
+        </ListBox>
+    </StackPanel>
+</Window>
