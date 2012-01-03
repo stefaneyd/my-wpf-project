@@ -1,0 +1,21 @@
+<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+DataContext="{x:Static sys:Environment.OSVersion}" >
+    <Grid.RowDefinitions>
+        <RowDefinition />
+        <RowDefinition />
+        <RowDefinition />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="80" />
+        <ColumnDefinition />
+    </Grid.ColumnDefinitions>
+    
+    <TextBlock Grid.Row="0" Grid.Column="0" Text="Platform:" />
+    <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Platform}" />
+    <TextBlock Grid.Row="1" Grid.Column="0" Text="Version:" />
+    <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Version}" />
+    <TextBlock Grid.Row="2" Grid.Column="0" Text="Service Pack:" />
+    <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding ServicePack}" />
+</Grid>

@@ -1,0 +1,11 @@
+<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:sys="clr-namespace:System;assembly=mscorlib" >
+    <Grid.Resources>
+        <sys:String x:Key="val">Foo</sys:String>
+    </Grid.Resources>
+    <StackPanel>
+        <TextBlock Text="{Binding Source={StaticResource val}}" />
+        <TextBlock Text="{Binding Path=Length, Source={StaticResource val}}" />
+    </StackPanel>
+</Grid>
